@@ -6,7 +6,7 @@ const path = require('path')
 const app = express()
 const port = process.env.PORT || 6001
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.send('Hello World! asasas'))
 
 // 외부에서 서버에 접근하면 public 폴더에 있는 것만 쓸 수 있게 함
 app.use('/', express.static(path.join(__dirname, 'public')))
@@ -21,7 +21,6 @@ app.set('view engine', 'ejs')
 
 // 라우팅 함수
 const router = express.Router()
-app.use('/', router)
 
 // list로 get 요청이 오면 실행
 router.route('/list').get(async (req, res) => {
