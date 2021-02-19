@@ -4,6 +4,9 @@ const path = require('path')
 
 // express 모듈 사용
 const app = express()
+const port = process.env.PORT || 6001
+
+app.get('/', (req, res) => res.send('Hello World!'))
 
 // 외부에서 서버에 접근하면 public 폴더에 있는 것만 쓸 수 있게 함
 app.use('/', express.static(path.join(__dirname, 'public')))
@@ -16,7 +19,7 @@ app.use(express.urlencoded({ extended: true }))
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
-// 라우팅 함수 aaa
+// 라우팅 함수
 const router = express.Router()
 app.use('/', router)
 
@@ -60,6 +63,6 @@ router.route('/search').get((req, res) => {
 })
 
 
-app.listen(process.env.PORT||6001, 'localhost', () => {
+app.listen(port, 'localhost', () => {
     console.log('서버 시작 : Port - 6001, Hostname - localhost')
 })
