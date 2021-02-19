@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안녕하세요</title>
+</head>
+<body>
+    <h1>안녕하세요</h1>
+    <p>반갑습니다. 새로 만든 서버입니다.</p>
+    <a href="/list">디비 리스트 보기</a>
+    <form action="/list" method="get">
+        <input type="text" name="id">
+        <input type="submit" value="한 사람 보기">
+    </form>
+
+    <hr>
+    <input type="text" id="input">
+    <input type="button" value="GET" onclick="getFunc()">
+    <input type="button" value="POST" onclick="postFunc()">
+    <p id="output"></p>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const output = document.getElementById('output')
+        const input = document.getElementById('input')
+        async function getFunc() {
+            try {
+                const response = await axios({
+                    method: 'get',
+                    url: `/search?data=${input.value}`,
+                    responseType: 'json'
+                })
+                output.innerText = JSON.stringify(response.data)
+            } catch (error) {}
+        }
+
+        async function postFunc() {
+            try {
+                const response = await axios({
+                    method: 'post',
+                    url: '/search',
+                    responseType: 'json',
+                    data: {
+                        data: input.value
+                    }
+                })
+                output.innerText = JSON.stringify(response.data)
+            } catch (err) {}
+        }
+    </script>
+</body>
+</html>

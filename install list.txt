@@ -1,0 +1,4 @@
+node install express --save
+node install path --save
+node install mariadb --save
+node install ejs --save
