@@ -1,42 +1,15 @@
 {
-     "name": "ubiaccess-server",
+     "name": "nhj-node-test",
      "version": "1.0.0",
-     "description": "Ubiaccess Server",
+     "description": "",
      "main": "index.js",
      "scripts": {
-          "start": "node index.js"
+        "start" : "node app.js"
+        , "test": "echo \"Error: no test specified\" && exit 1"
      },
-     "keywords": [],
-     "author": "Mike",
+     "author": "",
      "license": "ISC",
      "dependencies": {
-          "StringScanner": "0.0.3",
-          "connect-flash": "^0.1.1",
-          "cookie-parser": "^1.4.5",
-          "cors": "^2.8.5",
-          "crypto": "^1.0.1",
-          "crypto-js": "^4.0.0",
-          "ejs": "^3.1.5",
-          "express": "^4.17.1",
-          "express-session": "^1.17.1",
-          "express-swagger-generator": "^1.1.17",
-          "hashmap": "^2.4.0",
-          "moment": "^2.27.0",
-          "multer": "^1.4.2",
-          "mysql": "^2.18.1",
-          "mysql-utilities": "^1.1.0-alpha.6",
-          "network": "^0.5.0",
-          "node-uuid": "^1.4.8",
-          "nodemailer": "^6.4.17",
-          "nodemon": "^2.0.7",
-          "passport": "^0.4.1",
-          "passport-local": "^1.0.0",
-          "request": "^2.88.2",
-          "socket.io": "^2.3.0",
-          "winston": "^2.4.4",
-          "winston-daily-rotate-file": "^1.7.2",
-          "xml-js": "^1.6.11",
-          "xml-to-json-promise": "0.0.3",
-          "xml2js": "^0.4.23"
+       "express": "^4.17.1"
      }
-}
+   }
