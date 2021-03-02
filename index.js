@@ -21,7 +21,7 @@ app.set('view engine', 'ejs')
 
 
 
-app.listen(port, 'localhost', () => {
+app.listen(port, () => {
     console.log('서버 시작 : Port - 6001, Hostname - localhost')
 })
 
