@@ -6,6 +6,7 @@ const path = require('path')
 const app = express()
 const port = process.env.PORT || 6001
 
+app.get('/', (req, res) => res.send('asdfsadf World!'))
 
 // 외부에서 서버에 접근하면 public 폴더에 있는 것만 쓸 수 있게 함
 app.use('/', express.static(path.join(__dirname, 'public')))
